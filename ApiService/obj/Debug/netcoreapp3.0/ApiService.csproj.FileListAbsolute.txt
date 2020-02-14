@@ -105,6 +105,11 @@ C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\ApiService.runtimec
 C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\ApiService.runtimeconfig.dev.json
 C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\ApiService.dll
 C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\ApiService.pdb
-C:\repos\ClientApiService\ApiService\obj\Debug\netcoreapp3.0\ApiService.MvcApplicationPartsAssemblyInfo.cache
 C:\repos\ClientApiService\ApiService\obj\Debug\netcoreapp3.0\ApiService.dll
 C:\repos\ClientApiService\ApiService\obj\Debug\netcoreapp3.0\ApiService.pdb
+C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\Data\Json\Clients.json
+C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyInjection.dll
+C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\AutoMapper.dll
+C:\repos\ClientApiService\ApiService\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\repos\ClientApiService\ApiService\obj\Debug\netcoreapp3.0\ApiService.MvcApplicationPartsAssemblyInfo.cache
