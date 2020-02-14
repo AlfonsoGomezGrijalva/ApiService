@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AlfonsoGomez\\Documents\\GitHub\\ApiService\\ApiService\\ApiService.csproj": {}
+    "C:\\repos\\ClientApiService\\ApiService\\ApiService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AlfonsoGomez\\Documents\\GitHub\\ApiService\\ApiService\\ApiService.csproj": {
+    "C:\\repos\\ClientApiService\\ApiService\\ApiService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AlfonsoGomez\\Documents\\GitHub\\ApiService\\ApiService\\ApiService.csproj",
+        "projectUniqueName": "C:\\repos\\ClientApiService\\ApiService\\ApiService.csproj",
         "projectName": "ApiService",
-        "projectPath": "C:\\Users\\AlfonsoGomez\\Documents\\GitHub\\ApiService\\ApiService\\ApiService.csproj",
+        "projectPath": "C:\\repos\\ClientApiService\\ApiService\\ApiService.csproj",
         "packagesPath": "C:\\Users\\AlfonsoGomez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AlfonsoGomez\\Documents\\GitHub\\ApiService\\ApiService\\obj\\",
+        "outputPath": "C:\\repos\\ClientApiService\\ApiService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AlfonsoGomez\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,26 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
