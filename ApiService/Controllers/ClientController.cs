@@ -7,6 +7,7 @@ using ApiService.Service;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace ApiService.Controllers
 {
@@ -16,11 +17,13 @@ namespace ApiService.Controllers
     {
         private readonly IClientSourceAdapter _clientSourceAdapter;
         private readonly IMapper _mapper;
+        private readonly ILogger<ClientController> _logger;
 
-        public ClientController(IClientSourceAdapter clientSourceAdapter, IMapper mapper)
+        public ClientController(IClientSourceAdapter clientSourceAdapter, IMapper mapper, ILogger<ClientController> logger)
         {
             _clientSourceAdapter = clientSourceAdapter;
             _mapper = mapper;
+            _logger = logger;
         }
 
         [HttpGet()]
@@ -43,7 +46,8 @@ namespace ApiService.Controllers
             }
             catch (Exception ex)
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, ex.ToString());
+                _logger.LogError($"Error retrieving clients: {ex.ToString()}");
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
     }
