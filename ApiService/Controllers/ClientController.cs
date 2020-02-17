@@ -7,6 +7,7 @@ using ApiService.Service;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace ApiService.Controllers
@@ -15,13 +16,13 @@ namespace ApiService.Controllers
     [ApiController]
     public class ClientController : ControllerBase
     {
-        private readonly IClientSourceAdapter _clientSourceAdapter;
+        private readonly IConfiguration _configuration;
         private readonly IMapper _mapper;
         private readonly ILogger<ClientController> _logger;
 
-        public ClientController(IClientSourceAdapter clientSourceAdapter, IMapper mapper, ILogger<ClientController> logger)
+        public ClientController(IConfiguration configuration, IMapper mapper, ILogger<ClientController> logger)
         {
-            _clientSourceAdapter = clientSourceAdapter;
+            _configuration = configuration;
             _mapper = mapper;
             _logger = logger;
         }
@@ -37,7 +38,9 @@ namespace ApiService.Controllers
         {
             try
             {
-                var clients = await _clientSourceAdapter.GetClients();
+                IClientSourceAdapter clientSourceAdapter = new ClientFileSourceAdapter(_configuration.GetSection("JsonPath").Value, new ClientFileSource());
+
+                var clients = await clientSourceAdapter.GetClients();
 
                 if (clients == null)
                     return NotFound();

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ApiService.Service;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +28,7 @@ namespace ApiService
         {
             services.AddControllers();
             services.AddAutoMapper();
-            services.AddScoped<IClientSourceAdapter>(_ => new ClientFileSourceAdapter(Configuration.GetSection("JsonPath").Value, new ClientFileSource()));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
